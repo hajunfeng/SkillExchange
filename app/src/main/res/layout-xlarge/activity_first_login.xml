@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aoge.skillexchange.FirstLoginActivity">
+
+    <com.example.aoge.skillexchange.CircleImageButton
+        android:id="@+id/img_headportrait"
+        android:layout_width="111dp"
+        android:layout_height="119dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="selectHead"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/ll_sex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_welcome"
+        app:layout_constraintVertical_bias="0.478" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioGroup
+            android:id="@+id/sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/nan"
+                android:layout_width="104dp"
+                android:layout_height="45dp"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/male"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/nv"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:text="@string/female"
+                android:textSize="20sp" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_can"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="You can:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/edt_can"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_sex"
+        app:layout_constraintVertical_bias="0.951" />
+
+    <EditText
+        android:id="@+id/edt_can"
+        android:layout_width="395dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="200dp"
+
+        android:layout_marginRight="200dp"
+        android:background="@drawable/editsharp"
+        android:hint=" enter your skills"
+        android:inputType="textEmailAddress"
+        android:maxLength="70"
+        android:padding="0dp"
+        android:singleLine="true"
+        android:textColor="@color/hint1"
+        android:textColorHint="@color/hint1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_sex" />
+
+    <TextView
+        android:id="@+id/txt_want"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="You want:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/edt_want"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_can"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/edt_want"
+        android:layout_width="395dp"
+        android:layout_height="52dp"
+
+        android:layout_marginEnd="196dp"
+        android:layout_marginRight="196dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/editsharp"
+        android:hint=" enter what you want to learn"
+        android:inputType="textEmailAddress"
+        android:maxLength="70"
+        android:padding="0dp"
+        android:singleLine="true"
+        android:textColor="@color/hint1"
+        android:textColorHint="@color/hint1"
+        app:layout_constraintBottom_toTopOf="@+id/btnjoinus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_want" />
+
+    <Button
+        android:id="@+id/btnjoinus"
+        android:layout_width="394dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="292dp"
+        android:background="@drawable/editbutton"
+        android:onClick="btnJoinUs"
+        android:text="@string/action_join_us_short"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="328dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="casual"
+        android:text="Exrea large"
+        android:textColor="@color/colorAccent"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
